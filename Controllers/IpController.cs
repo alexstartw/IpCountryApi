@@ -1,23 +1,28 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using WebApplication3.Services;
+﻿using CSharpSKA.Services;
+using Microsoft.AspNetCore.Mvc;
+using Polly;
 
-namespace WebApplication3.Controllers;
+namespace CSharpSKA.Controllers;
 
 [ApiController]
 [Route("[controller]")]
 public class IpController : ControllerBase
 {
     private readonly IpService _ipService;
-    
-    public IpController(IpService ipService)
+    private ILogger<IpController> _logger;
+
+    public IpController(IpService ipService, ILogger<IpController> logger)
     {
         _ipService = ipService;
+        _logger = logger;
     }
 
     [HttpGet("GetIp")]
     public IpContent? GetIp()
     {
-        return _ipService.GetIp();
+        var retryPolicy = Policy.Handle<HttpRequestException>()
+            .Retry(3, (exception, retryCount) => { _logger.LogError("Get IP Failed!"); });
+        return retryPolicy.Execute(()=>_ipService.GetIp()); 
     }
 
     [HttpGet("GetCountryCode")]

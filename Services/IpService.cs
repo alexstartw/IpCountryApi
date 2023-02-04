@@ -1,12 +1,13 @@
-﻿using System.Net.Http.Headers;
+﻿using System.ComponentModel.Design;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using CSharpSKA;
-using WebApplication3.Controllers;
-using WebApplication3.Interface;
+using CSharpSKA.Controllers;
+using CSharpSKA.Interface;
 
-namespace WebApplication3.Services;
+namespace CSharpSKA.Services;
 
 public class IpService : IIpService
 {

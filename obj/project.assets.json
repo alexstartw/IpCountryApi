@@ -45,6 +45,19 @@
           }
         }
       },
+      "Polly/7.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "type": "package",
         "dependencies": {
@@ -371,6 +384,30 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Polly/7.2.3": {
+      "sha512": "DeCY0OFbNdNxsjntr1gTXHJ5pKUwYzp04Er2LLeN3g6pWhffsGuKVfMBLe1lw7x76HrPkLxKEFxBlpRxS2nDEQ==",
+      "type": "package",
+      "path": "polly/7.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Polly.png",
+        "lib/net461/Polly.dll",
+        "lib/net461/Polly.pdb",
+        "lib/net461/Polly.xml",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net472/Polly.xml",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.7.2.3.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "sha512": "eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "type": "package",
@@ -456,6 +493,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.1",
+      "Polly >= 7.2.3",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -465,11 +503,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alex.lin92\\RiderProjects\\WebApplication3\\CSharpSKA\\CSharpSKA.csproj",
+      "projectUniqueName": "C:\\Users\\alex.lin92\\RiderProjects\\CSharpSKA\\CSharpSKA\\CSharpSKA.csproj",
       "projectName": "CSharpSKA",
-      "projectPath": "C:\\Users\\alex.lin92\\RiderProjects\\WebApplication3\\CSharpSKA\\CSharpSKA.csproj",
+      "projectPath": "C:\\Users\\alex.lin92\\RiderProjects\\CSharpSKA\\CSharpSKA\\CSharpSKA.csproj",
       "packagesPath": "C:\\Users\\alex.lin92\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alex.lin92\\RiderProjects\\WebApplication3\\CSharpSKA\\obj\\",
+      "outputPath": "C:\\Users\\alex.lin92\\RiderProjects\\CSharpSKA\\CSharpSKA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\alex.lin92\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -503,6 +541,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.1, )"
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[7.2.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

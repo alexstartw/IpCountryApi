@@ -1,8 +1,9 @@
-﻿namespace WebApplication3.Interface;
+﻿namespace CSharpSKA.Interface;
 
 public interface IIpService
 {
     public IpContent GetIp();
 
     public string GetCountry();
+    
 }

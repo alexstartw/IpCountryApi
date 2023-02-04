@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace WebApplication3;
+namespace CSharpSKA;
 
 public class IpContent
 {

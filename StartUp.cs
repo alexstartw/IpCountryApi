@@ -1,5 +1,5 @@
 
-using WebApplication3.Services;
+using CSharpSKA.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
